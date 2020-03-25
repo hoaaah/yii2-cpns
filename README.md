@@ -24,7 +24,7 @@ Features
 
 Installation
 -------------------
->I am assuming that you know how to: install and use Composer, and install additional packages/drivers that may be needed for you to run everything on your system. In case you are new to all of this, you can check my guides for installing default [https://belajararief.com/index.php/tulisan/tekno/yii2-series/191-pemrograman-web-dengan-yii2-prainstalasi](yii2 application)
+>I am assuming that you know how to: install and use Composer, and install additional packages/drivers that may be needed for you to run everything on your system. In case you are new to all of this, you can check my guides for installing default [yii2 application](https://belajararief.com/index.php/tulisan/tekno/yii2-series/191-pemrograman-web-dengan-yii2-prainstalasi)
 
 1. Create database that you are going to use for your application (you can use phpMyAdmin or any other tool that you like).
 
